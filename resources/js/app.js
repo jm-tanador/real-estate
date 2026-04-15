@@ -30,4 +30,8 @@ const app = createApp(App)
 app.use(pinia)
 app.use(vuetify)
 app.use(router)
-app.mount('#app')
+// app.mount('#app')
+
+router.isReady().then(() => {
+    app.mount('#app')
+})

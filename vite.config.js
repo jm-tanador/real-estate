@@ -10,7 +10,7 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-    // define: {
-    //     __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false,
-    // }
+    define: {
+        __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false,
+    }
 });

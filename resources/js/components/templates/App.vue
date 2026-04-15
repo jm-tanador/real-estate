@@ -4,18 +4,20 @@
             density="compact"
             color="primary"
             prominent
-            >
+            v-if="$route.name && $route.name !== 'Login'"
+        >
             <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
             <v-toolbar-title>Laravel 9 + Vue 3</v-toolbar-title>
         </v-app-bar>
 
+
         <v-navigation-drawer
             v-model="drawer"
             temporary
-            >
+        >
             <v-list density="compact" class="pt-0" >
                 <v-list-item
-                    v-for="(item, i) in items.options.routes"
+                    v-for="(item, i) in menuItems"
                     :key="i"
                     :value="item"
                     color="primary"
@@ -43,5 +45,11 @@ export default {
         drawer: false,
         items: useRouter(),
     }),
+    computed: {
+        menuItems() {
+            const router = useRouter();
+            return router.options.routes.filter(r => r.name !== 'Login');
+        }
+    },
 }
 </script>

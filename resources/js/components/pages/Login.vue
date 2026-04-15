@@ -110,7 +110,7 @@ export default {
     min-height: 100vh;
     width: 100%;
     background-color: #1a1c23;
-    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80');
+    background-image: url('images/login-bg.jpg');
     background-size: cover;
     background-position: center;
     font-family: 'Poppins', sans-serif;

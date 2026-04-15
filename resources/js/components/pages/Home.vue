@@ -2,7 +2,7 @@
     <div class="container">
         <v-card class="card">
             <v-card-item>
-                <v-card-title><h1>HOME</h1></v-card-title>
+                <v-card-title><h1>HOMEe</h1></v-card-title>
                 <v-card-subtitle>This is a card for testing Pinia Store</v-card-subtitle>
             </v-card-item>
             <v-card-text>

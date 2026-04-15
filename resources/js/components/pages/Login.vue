@@ -117,7 +117,7 @@ export default {
     color: white;
     position: relative;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
 }
 
 /* Dark Overlay spanning entire page */

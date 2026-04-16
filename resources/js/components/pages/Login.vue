@@ -1,126 +1,167 @@
 <template>
-    <div class="page-wrapper">
+    <v-app class="page-wrapper">
         <!-- Navigation Bar -->
         <nav class="navbar">
             <div class="logo">
                 <span class="t-bar"></span>
                 <span class="logo-text">REAL ESTATE<span>.</span></span>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links d-none d-md-flex">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Log In</a></li>
                 <li class="active"><a href="#">Join</a></li>
                 <li><a href="#">About Us</a></li>
             </ul>
-            <div class="search-bar">
-                <span class="search-icon">🔍</span>
-                <input type="text" placeholder="Search" />
+            <!-- <div class="search-bar d-none d-sm-flex">
+                <v-text-field
+                    placeholder="Search"
+                    variant="plain"
+                    hide-details
+                    density="compact"
+                    prepend-inner-icon="mdi-magnify"
+                    class="mb-2"
+                ></v-text-field>
+            </div> -->
+            <div>
+                <ul class="nav-links d-none d-md-flex">
+                    <li><a :href="img"><v-icon class="icon-btn" icon="mdi-twitter"></v-icon></a></li>
+                    <li><a :href="img"><v-icon class="icon-btn" icon="mdi-facebook"></v-icon></a></li>
+                    <li><a :href="img"><v-icon class="icon-btn-ig" icon="mdi-instagram"></v-icon></a></li>
+                </ul>
             </div>
         </nav>
 
-        <main class="content-container">
-            <div class="content-inner">
-                <!-- Left Side: Hero Text -->
-                <section class="hero-section">
-                    <p class="tagline">START YOUR JOURNEY</p>
-                    <h1>
-                        Unlock the homeowner <br />
-                        <span class="highlight">inside YOU</span>, Secure your <br />
-                        Dream Property
-                    </h1>
-                    <p class="subtext">
-                        Get started with the most trusted and transparent platform <br /> 
-                        to browse, tour, and buy your next home.
-                    </p>
-                    <div class="hero-btns">
-                        <button class="btn-outline">View Listings</button>
-                        <button class="btn-primary glow">Book a Tour</button>
-                    </div>
-                </section>
+        <v-main class="content-container">
+        <div class="content-inner">
+            <!-- Left Side: Hero Text -->
+            <section class="hero-section">
+                <p class="tagline">START YOUR JOURNEY</p>
+                <h1>
+                    Unlock the homeowner <br />
+                    <span class="highlight">inside YOU</span>,<br /> Secure your <br />
+                    Dream Property
+                </h1>
+                <p class="subtext">
+                    Get started with the most trusted and transparent platform <br /> 
+                    to browse, tour, and buy your next home.
+                </p>
+                <div class="hero-btns">
+                    <v-btn variant="outlined" class="btn-outline">View Listings</v-btn>
+                    <v-btn class="btn-primary glow">Book a tripping</v-btn>
+                </div>
+            </section>
 
-                <!-- Right Side: Register Form -->
-                <section class="form-section">
-                    <div class="form-card">
-                        <h2>Create <br />new account<span>.</span></h2>
-                        
-                        <form @submit.prevent>
+            <!-- Right Side: Register Form -->
+            <section class="form-section">
+                <div class="form-card">
+                    <h2>Create <br />new account<span>.</span></h2>
+                    
+                    <form @submit.prevent>
+                        <div class="input-group">
+                            <label>Username</label>
+                            <v-text-field
+                                placeholder="junadelacruz"
+                                variant="outlined"
+                                hide-details
+                                class="custom-v-input"
+                                autocomplete="off"
+                            ></v-text-field>
+                        </div>
+
+                        <div class="row">
                             <div class="input-group">
-                                <label>Username</label>
-                                <div class="input-wrapper">
-                                <input type="text" placeholder="junadelacruz"/>
-                                <i class="icon">👤</i>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="input-group">
                                 <label>First Name</label>
-                                <div class="input-wrapper">
-                                    <input type="text" placeholder="Juan" />
-                                    <i class="icon">🆔</i>
-                                </div>
-                                </div>
-                                <div class="input-group">
-                                <label>Last Name</label>
-                                <div class="input-wrapper">
-                                    <input type="text" placeholder="Dela Cruz" />
-                                    <i class="icon">🆔</i>
-                                </div>
-                                </div>
+                                <v-text-field
+                                    placeholder="Juan"
+                                    variant="outlined"
+                                    hide-details
+                                    class="custom-v-input"
+                                    autocomplete="off"
+                                ></v-text-field>
                             </div>
-
                             <div class="input-group">
-                                <label>Email</label>
-                                <div class="input-wrapper">
-                                <input type="email" placeholder="juandelacruz@gmail.com"/>
-                                <i class="icon">✉️</i>
-                                </div>
+                                <label>Last Name</label>
+                                <v-text-field
+                                    placeholder="Dela Cruz"
+                                    variant="outlined"
+                                    hide-details
+                                    class="custom-v-input"
+                                    autocomplete="off"
+                                ></v-text-field>
                             </div>
+                        </div>
 
-                            <div class="input-group password-group">
-                                <label>Password</label>
-                                <div class="input-wrapper">
-                                <input type="password" value="password123" />
-                                <i class="icon">👁️</i>
-                                </div>
-                            </div>
+                        <div class="input-group">
+                            <label>Email</label>
+                            <v-text-field
+                                placeholder="juandelacruz@gmail.com"
+                                type="email"
+                                variant="outlined"
+                                hide-details
+                                class="custom-v-input"
+                                autocomplete="off"
+                            ></v-text-field>
+                        </div>
 
-                            <p class="login-link">Already A Member? <a href="#">Log In</a></p>
+                        <div class="input-group password-group">
+                            <label>Password</label>
+                            <v-text-field
+                                type="password"
+                                variant="outlined"
+                                hide-details
+                                class="custom-v-input"
+                                placeholder="Enter password"
+                                autocomplete="off"
+                            ></v-text-field>
+                        </div>
+                        <div class="input-group password-group">
+                            <label>Re-enter password</label>
+                            <v-text-field
+                                type="password"
+                                variant="outlined"
+                                hide-details
+                                class="custom-v-input"
+                                placeholder="Confirm password"
+                                autocomplete="off"
+                            ></v-text-field>
+                        </div>
 
-                            <button class="btn-submit">Create Account</button>
-                        </form>
-                    </div>
-                </section>
-            </div>
-        </main>
-    </div>
+                        <p class="login-link">Already have an account? <a href="#">Log In</a></p>
+
+                        <v-btn :href="img" block class="btn-submit glow">Create Account</v-btn>
+                    </form>
+                </div>
+            </section>
+        </div>
+        </v-main>
+    </v-app>
 </template>
 
 <script>
 export default {
-  name: 'TravelzoFullscreen'
+    data() {
+        return {
+            img: "https://media.newyorker.com/photos/59095bb86552fa0be682d9d0/master/pass/Monkey-Selfie.jpg"
+        }
+    },
 }
+// Vue 3 setup
 </script>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* Fullscreen Wrapper */
+/* restore original layout constraints */
 .page-wrapper {
-    min-height: 100vh;
-    width: 100%;
-    background-color: #1a1c23;
-    background-image: url('images/login-bg.jpg');
+    background-color: #1a1c23 !important;
+    background-image: url('images/login-bg.jpg') !important;
     background-size: cover;
     background-position: center;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Poppins', sans-serif !important;
+    color: white !important;
+    min-height: 100vh;
 }
 
-/* Dark Overlay spanning entire page */
 .page-wrapper::before {
     content: '';
     position: absolute;
@@ -132,14 +173,14 @@ export default {
     z-index: 1;
 }
 
-/* Header/Nav Styles */
+/* Original Navbar Sizing */
 .navbar {
     position: relative;
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 8%;
+    padding: 40px 8%; /* Kept original 8% */
 }
 
 .logo {
@@ -159,9 +200,7 @@ export default {
     top: 15px;
 }
 
-.logo-text span {
-    color: #2196f3;
-}
+.logo-text span { color: #2196f3; }
 
 .nav-links {
     display: flex;
@@ -174,7 +213,6 @@ export default {
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
-    transition: 0.3s;
 }
 
 .nav-links li.active a {
@@ -183,32 +221,21 @@ export default {
     padding-bottom: 5px;
 }
 
+/* Search Bar Sizing */
 .search-bar {
     background: rgba(255, 255, 255, 0.08);
-    padding: 10px 20px;
+    padding: 2px 20px;
     border-radius: 30px;
-    display: flex;
-    align-items: center;
     width: 250px;
 }
 
-.search-bar input {
-    background: transparent;
-    border: none;
-    color: white;
-    margin-left: 10px;
-    outline: none;
-    width: 100%;
-}
-
-/* Main Content Area */
+/* Hero Section Sizing */
 .content-container {
     position: relative;
     z-index: 5;
-    flex: 1;
     display: flex;
     align-items: center;
-    padding: 0 8% 50px 8%;
+    padding: 0 8% 50px 8%; /* Kept original 8% */
 }
 
 .content-inner {
@@ -218,10 +245,16 @@ export default {
     justify-content: space-between;
 }
 
-/* Hero Section */
 .hero-section {
     flex: 1;
     max-width: 600px;
+}
+
+.hero-section h1 {
+    font-size: 56px; /* Original Size */
+    line-height: 1.1;
+    margin-bottom: 25px;
+    font-weight: 700;
 }
 
 .tagline {
@@ -232,16 +265,7 @@ export default {
     font-weight: 600;
 }
 
-.hero-section h1 {
-    font-size: 56px;
-    line-height: 1.1;
-    margin-bottom: 25px;
-    font-weight: 700;
-}
-
-.highlight {
-    color: #2196f3;
-}
+.highlight { color: #2196f3; }
 
 .subtext {
     color: #aaa;
@@ -255,7 +279,7 @@ export default {
     gap: 20px;
 }
 
-/* Form Section */
+/* Form Sizing */
 .form-section {
     flex: 1;
     display: flex;
@@ -268,14 +292,12 @@ export default {
 }
 
 .form-card h2 {
-    font-size: 44px;
+    font-size: 44px; /* Original Size */
     margin-bottom: 40px;
     line-height: 1.2;
 }
 
-.form-card h2 span {
-    color: #2196f3;
-}
+.form-card h2 span { color: #2196f3; }
 
 .input-group {
     margin-bottom: 20px;
@@ -290,27 +312,28 @@ export default {
     font-weight: 600;
 }
 
-.input-wrapper {
-    background: rgba(42, 45, 55, 0.6);
-    backdrop-filter: blur(5px);
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    padding: 14px 18px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+/* Vuetify v-text-field Custom Sizing */
+.custom-v-input :deep(.v-field) {
+    background: rgba(42, 45, 55, 0.6) !important;
+    border-radius: 14px !important; /* Original Radius */
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    height: 52px !important; /* Force original input height */
 }
 
-.input-wrapper input {
-    background: transparent;
-    border: none;
-    color: white;
-    width: 100%;
-    outline: none;
-    font-size: 15px;
+.custom-v-input :deep(.v-field__input) {
+    padding: 14px 18px !important; /* Original internal padding */
+    color: white !important;
+    font-size: 15px !important;
+    min-height: 52px !important;
 }
 
-.password-group .input-wrapper {
-    border: 1px solid #2196f3;
+.custom-v-input :deep(.v-field__outline) {
+    display: none; /* Remove Vuetify default borders to use our custom one */
+}
+
+/* Specific styling for the Password field border */
+.password-group .custom-v-input :deep(.v-field) {
+    /* border: 1px solid #2196f3 !important; */
 }
 
 .row {
@@ -335,29 +358,27 @@ export default {
     font-weight: 600;
 }
 
-/* Buttons */
-button {
-    cursor: pointer;
-    border: none;
-    transition: all 0.3s ease;
-}
-
+/* Button Sizing */
 .btn-outline {
-    background: transparent;
-    border: 1px solid #555;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-size: 15px;
+    background: transparent !important;
+    border: 1px solid #555 !important;
+    color: white !important;
+    height: 48px !important;
+    padding: 0 30px !important;
+    border-radius: 30px !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
 }
 
 .btn-primary {
-    background: #2196f3;
-    color: white;
-    padding: 12px 40px;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 15px;
+    background: #2196f3 !important;
+    color: white !important;
+    height: 48px !important;
+    padding: 0 40px !important;
+    border-radius: 30px !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
 }
 
 .glow {
@@ -370,49 +391,42 @@ button {
 }
 
 .btn-submit {
-    width: 100%;
-    background: #2196f3;
-    color: white;
-    padding: 18px;
-    border-radius: 18px;
-    font-weight: 600;
-    font-size: 17px;
-    box-shadow: 0 10px 30px rgba(33, 150, 243, 0.3);
+    height: 60px !important; /* Original chunky height */
+    background: #2196f3 !important;
+    color: white !important;
+    border-radius: 18px !important;
+    font-weight: 600 !important;
+    font-size: 17px !important;
+    text-transform: none !important;
+    /* box-shadow: 0 10px 30px rgba(33, 150, 243, 0.3) !important; */
 }
 
-.icon {
-    font-style: normal;
-    opacity: 0.5;
-    font-size: 16px;
-    margin-left: 10px;
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(33, 150, 243, 0.6);
+}
+
+.icon-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(33, 150, 243, 0.6);
+    color: #2196f3 !important;
+}
+
+.icon-btn-ig:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px #f4059a;
+    color: #f4059a !important;
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 1100px) {
-    .hero-section h1 { font-size: 40px; }
-    .navbar { padding: 30px 5%; }
-    .content-container { padding: 0 5% 50px 5%; }
-}
-
 @media (max-width: 900px) {
     .content-inner {
         flex-direction: column;
         text-align: center;
     }
-    .hero-section {
-        margin-bottom: 60px;
-    }
-    .hero-btns {
-        justify-content: center;
-    }
-    .form-section {
-        justify-content: center;
-    }
-    .login-link {
-        text-align: center;
-    }
-    .nav-links {
-        display: none; /* Hide nav links on small screens for simplicity */
-    }
+    .hero-section { margin-bottom: 60px; }
+    .hero-btns { justify-content: center; }
+    .form-section { justify-content: center; }
+    .login-link { text-align: center; }
 }
 </style>

@@ -10,7 +10,7 @@
             <ul class="nav-links d-none d-md-flex">
                 <li><a href="#">Home</a></li>
                 <!-- Only Home, Log In, and About Us as requested -->
-                <li :class="{ active: isLogin }"><a href="#" @click.prevent="isLogin = true">Log In</a></li>
+                <li class="active"><a href="#" @click.prevent="isLogin = true">Log In</a></li>
                 <li><a href="#">About Us</a></li>
             </ul>
 

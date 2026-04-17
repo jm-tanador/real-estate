@@ -333,7 +333,7 @@ export default {
 
 /* Specific styling for the Password field border */
 .password-group .custom-v-input :deep(.v-field) {
-    /* border: 1px solid #2196f3 !important; */
+    border: 1px solid #2196f3 !important;
 }
 
 .row {

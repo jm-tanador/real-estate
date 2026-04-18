@@ -122,7 +122,7 @@ export default {
     },
     methods: {
         handleScroll() {
-            this.isScrolled = window.scrollY > 50;
+            this.isScrolled = window.scrollY > 20;
         }
     },
     mounted() {
@@ -198,6 +198,7 @@ export default {
     min-height: 620px;
     position: relative;
     z-index: 10;
+    margin-top: -100px;
 }
 
 /* Form Styles */

@@ -3,6 +3,7 @@ import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
+    base: '/real-estate/',
     plugins: [
         vue(),
         laravel({

@@ -31,7 +31,7 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'build' # If you are using Laravel/Vite, this might be 'public'
+          path: 'dist' # If you are using Laravel/Vite, this might be 'public'
 
   deploy:
     needs: build_site

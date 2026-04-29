@@ -1,3 +1,3 @@
 <?php
-// Forward Vercel requests to the normal Laravel entry point
+// Bridge to Laravel
 require __DIR__ . '/../public/index.php';

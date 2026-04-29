@@ -90,7 +90,14 @@ export default {
         async fetchProperties() {
             try {
                 const response = await axios.get('/api/properties');
-                this.properties = response.data;
+                
+                // Safety Check: Only save the data if it is actually an array
+                if (Array.isArray(response.data)) {
+                    this.properties = response.data;
+                } else {
+                    console.error("API did not return an array. Check Laravel routing.");
+                    this.properties = []; 
+                }
             } catch (error) {
                 console.error("Error:", error);
             } finally {

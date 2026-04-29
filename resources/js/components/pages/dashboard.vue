@@ -71,9 +71,9 @@
         </section>
 
         <!-- Floating Chat Button -->
-        <div class="chat-btn">
+        <!-- <div class="chat-btn">
             <i class="fas fa-comment-dots"></i>
-        </div>
+        </div> -->
     </div>
 </template>
 

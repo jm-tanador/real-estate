@@ -54,7 +54,7 @@
                 <div v-for="property in properties" :key="property.id" class="property-card">
                     <div class="card-image-wrapper">
                         <!-- We use a default luxury image if none exists in Firebase -->
-                        <img :src="property.image || 'https://images.unsplash.com/photo-1600585154340-be6191da95b8?auto=format&fit=crop&w=800&q=80'" alt="Property">
+                        <img :src="property.src" alt="Property">
                         <div class="price-tag">${{ Number(property.price).toLocaleString() }}</div>
                     </div>
                     <div class="card-content">
